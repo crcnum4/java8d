@@ -12,6 +12,6 @@ public class SavingsAccount extends BankAccount {
     }
 
     public void applyInterest() {
-        balance += balance * ((float) interest / 100.0);
+        deposit((int)(balance * ((float) interest / 100.0)));
     }
 }
