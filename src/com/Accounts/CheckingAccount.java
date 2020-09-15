@@ -1,4 +1,4 @@
-package com.bank;
+package com.Accounts;
 
 public class CheckingAccount extends BankAccount {
     public CheckingAccount(int balance, int accountNumber, String owner){

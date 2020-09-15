@@ -1,4 +1,4 @@
-package com.bank;
+package com.Accounts;
 
 public class BankAccount {
     protected int balance;

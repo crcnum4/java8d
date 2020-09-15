@@ -1,8 +1,11 @@
 package com.company;
 
-import com.bank.CheckingAccount;
-import com.bank.SavingsAccount;
-import com.bankTools.DebitCard;
+import com.Accounts.CheckingAccount;
+import com.Accounts.SavingsAccount;
+import com.Bank.Client;
+import com.BankTools.DebitCard;
+import com.Accounts.CDInvestment;
+import com.Accounts.InvestmentAccount;
 
 import java.util.*;
 
@@ -15,15 +18,11 @@ public class Main {
         CheckingAccount myAcct = new CheckingAccount(1000, 777, "Clifton");
         SavingsAccount mySavings = new SavingsAccount(3500, 12345, "John", 5);
         SavingsAccount wifeSavings = new SavingsAccount(4500, 382749, "Alice", 5);
-//        mySavings.withdraw(200);
-//        mySavings.deposit(50);
-//        mySavings.applyInterest();
         System.out.println(myAcct.accountDetails());
         myAcct.deposit(50);
         System.out.println(myAcct.accountDetails());
         myAcct.withdraw(100);
         System.out.println(myAcct.accountDetails());
-//        System.out.println(mySavings.accountDetails());
         List acts = new ArrayList<SavingsAccount>();
         acts.add(mySavings);
         DebitCard myCard = new DebitCard(
@@ -32,11 +31,24 @@ public class Main {
                 myAcct,
                 new ArrayList<SavingsAccount>(Arrays.asList(mySavings, wifeSavings))
         );
-        System.out.println(myAcct.accountDetails());
-        System.out.println(myCard.charge(100, "1234") ? "Accepted" : "Denied");
-        System.out.println(myAcct.accountDetails());
-        System.out.println(myCard.charge(500, "3287") ? "Accepted" : "Denied");
-        System.out.println(myAcct.accountDetails());
+//        System.out.println(myAcct.accountDetails());
+//        System.out.println(myCard.charge(100, "1234") ? "Accepted" : "Denied");
+//        System.out.println(myAcct.accountDetails());
+//        System.out.println(myCard.charge(500, "3287") ? "Accepted" : "Denied");
+//        System.out.println(myAcct.accountDetails());
+        CDInvestment myCD = new CDInvestment(10000, 987654, "Clifton", 2, 'Y');
+        InvestmentAccount invAcct = new InvestmentAccount(20000, 65482, "Ava", 5);
+
+        System.out.println(myCD.accountDetails());
+        myCD.withdraw(500);
+        System.out.println(myCD.accountDetails());
+        System.out.println(invAcct.accountDetails());
+        invAcct.withdraw(500);
+        System.out.println(invAcct.accountDetails());
+
+        Client cliff = new Client("Cliff", "Choiniere", "CC33987");
+        cliff.addAccount(myAcct);
+        cliff.addAccount(mySavings);
     }
 }
 

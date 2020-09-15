@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="008ab8cb-62bb-4642-affd-605b0df17597" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bank/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bank/BankAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/bank/DebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bankTools/DebitCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bank/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Accounts/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bank/CheckingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Accounts/CheckingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bank/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Accounts/SavingsAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bankTools/DebitCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/BankTools/DebitCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +67,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="773" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1600186879028">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="773" y="256" key="#com.intellij.ide.util.MemberChooser/-1440.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600186879028" />
     <state width="1878" height="243" key="GridCell.Tab.0.bottom" timestamp="1599607060388">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -85,15 +91,19 @@
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/-1440.203.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1599607060387" />
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1599000721348" />
+    <state x="737" y="269" key="RollbackChangesDialog" timestamp="1600188685269">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="737" y="269" key="RollbackChangesDialog/-1440.180.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600188685269" />
     <state x="401" y="178" key="SettingsEditor" timestamp="1599000453032">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="534" y="334" key="SettingsEditor/-1440.203.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1598979984549" />
     <state x="401" y="178" key="SettingsEditor/0.23.1440.877/1440.23.1920.1057@0.23.1440.877" timestamp="1599000453032" />
-    <state x="728" y="528" key="com.intellij.ide.util.TipDialog" timestamp="1599758211592">
+    <state x="888" y="421" key="com.intellij.ide.util.TipDialog" timestamp="1600182535896">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="728" y="528" key="com.intellij.ide.util.TipDialog/-1440.203.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1599758211592" />
+    <state x="888" y="421" key="com.intellij.ide.util.TipDialog/-1440.203.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1600182535896" />
     <state x="114" y="84" key="new project wizard" timestamp="1599000719437">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
