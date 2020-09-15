@@ -27,6 +27,10 @@ public class BankAccount {
     public String accountDetails() {
         return type + " Account" + "\tOwner: " + owner + "\tAccount Number: " + accountNum + "\tBalance: " + balance;
     }
+
+    public int getBalance() {
+        return balance;
+    }
 }
 
 

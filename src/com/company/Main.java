@@ -2,13 +2,15 @@ package com.company;
 
 import com.bank.CheckingAccount;
 import com.bank.SavingsAccount;
-import com.bank.DebitCard;
+import com.bankTools.DebitCard;
 
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        int num = 4 + 3;
         // write your code here
         CheckingAccount myAcct = new CheckingAccount(1000, 777, "Clifton");
         SavingsAccount mySavings = new SavingsAccount(3500, 12345, "John", 5);
