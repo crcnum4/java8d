@@ -1,17 +1,29 @@
 package com.company;
 
-import com.Accounts.CheckingAccount;
-import com.Accounts.SavingsAccount;
-import com.Bank.Client;
-import com.BankTools.DebitCard;
-import com.Accounts.CDInvestment;
-import com.Accounts.InvestmentAccount;
+import com.Game.Console;
+import com.Game.Die;
+import com.Game.Hand;
 
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        Random rand = new Random();
+
+        Hand myHand = new Hand(5);
+
+        myHand.roll(rand);
+
+        Console.displayDice(myHand.getDice());
+
+        myHand.roll(rand, Console.getChoices());
+
+        Console.displayDice(myHand.getDice());
+
+        myHand.roll(rand, Console.getChoices());
+
+        Console.displayDice(myHand.getDice());
 
     }
 }
