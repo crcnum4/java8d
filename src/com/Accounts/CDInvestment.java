@@ -1,6 +1,6 @@
 package com.Accounts;
 
-public class CDInvestment extends InvestmentAccount {
+public class CDInvestment extends InvestmentAccount implements Account {
     private int timeFrame;
     private char timePeriod; //D = day, W = week, M = Month, Q = quarter, Y = Year
 

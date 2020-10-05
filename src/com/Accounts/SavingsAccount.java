@@ -1,6 +1,6 @@
 package com.Accounts;
 
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount extends BankAccount implements Account {
     static int withdrawLimit = 5;
     private int withdrawCount;
     private int interest;

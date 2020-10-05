@@ -1,6 +1,6 @@
 package com.Accounts;
 
-public class BankAccount {
+public class BankAccount implements Account {
     protected int balance;
     private int accountNum;
     private String owner;
@@ -30,6 +30,10 @@ public class BankAccount {
 
     public int getBalance() {
         return balance;
+    }
+
+    public String getOwner() {
+        return owner;
     }
 }
 
