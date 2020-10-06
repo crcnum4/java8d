@@ -1,23 +1,29 @@
 package com.BankTools;
 
+import com.Accounts.Account;
 import com.Accounts.CheckingAccount;
 import com.Accounts.SavingsAccount;
+import com.Bank.Client;
 
 import java.util.Calendar;
 import java.util.List;
+
+// update debit card to connect with client so it has access to an account.
 
 public class DebitCard {
     private String cardNum;
     private String pin;
     private Calendar expDate;
-    private CheckingAccount primary;
-    private List<SavingsAccount> atmAccounts;
+    private Account primary;
+    private Client owner;
+//    private List<Account> atmAccounts;
 
-    public DebitCard(String cardNum, String pin, CheckingAccount primary, List atmAccounts) {
+
+    public DebitCard(String cardNum, String pin, Account primary, Client owner) {
         this.cardNum = cardNum;
         this.pin = pin;
         this.primary = primary;
-        this.atmAccounts = atmAccounts;
+        this.owner = owner;
     }
 
     public Boolean charge(int amount, String pin) {
