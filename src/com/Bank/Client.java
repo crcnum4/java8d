@@ -37,7 +37,11 @@ public class Client {
     }
 
     public void addCard(int accountNum) {
-        int index = accounts.indexOf()
+//        int index = accounts.indexOf()
+        /*
+        Once found instatiate a card with that account and the client.
+        you may need to add a getAccountNum to interface and classes.
+         */
     }
 
 
