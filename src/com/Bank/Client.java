@@ -1,12 +1,10 @@
 package com.Bank;
 
-import com.Accounts.Account;
-import com.Accounts.CDInvestment;
-import com.Accounts.CheckingAccount;
-import com.Accounts.SavingsAccount;
+import com.Accounts.*;
 import com.BankTools.DebitCard;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Client {
@@ -14,7 +12,7 @@ public class Client {
     protected String firstName;
     protected String lastName;
     protected String clientId;
-    protected List<Account> accounts;
+    protected HashMap<Integer, Account> accounts;
     protected List<DebitCard> cards;
 //    protected List<CheckingAccount> checkingAccounts;
 //    protected List<SavingsAccount> savingsAccounts;
@@ -25,7 +23,7 @@ public class Client {
         this.firstName = firstName;
         this.lastName = lastName;
         this.clientId = clientId;
-        accounts = new ArrayList<Account>();
+        accounts = new HashMap<Integer, Account>();
         cards = new ArrayList<DebitCard>();
 //        this.checkingAccounts = new ArrayList<CheckingAccount>();
 //        this.savingsAccounts = new ArrayList<SavingsAccount>();
@@ -33,15 +31,11 @@ public class Client {
     }
 
     public void addAccount(Account account) {
-        accounts.add(account);
+        accounts.put(account.getAccountNum(), account);
     }
 
     public void addCard(int accountNum) {
-//        int index = accounts.indexOf()
-        /*
-        Once found instatiate a card with that account and the client.
-        you may need to add a getAccountNum to interface and classes.
-         */
+        cards.add(new DebitCard("12341234", "1234", accounts.get(accountNum), this));
     }
 
 
@@ -63,8 +57,8 @@ public class Client {
 
     public String getAccounts() {
         String output = "";
-        for (var account : accounts ) {
-            output += account.accountDetails() + "\n";
+        for (var accountNum : accounts.keySet() ) {
+            output += accounts.get(accountNum).accountDetails() + "cards: " + cards.size() +  "\n";
         }
         return output;
     }

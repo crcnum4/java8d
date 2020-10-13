@@ -35,6 +35,10 @@ public class BankAccount implements Account {
     public String getOwner() {
         return owner;
     }
+
+    public int getAccountNum() {
+        return accountNum;
+    }
 }
 
 

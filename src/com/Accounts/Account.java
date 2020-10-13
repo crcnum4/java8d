@@ -6,4 +6,5 @@ public interface Account {
     public String getOwner();
     public int getBalance();
     public String accountDetails();
+    public int getAccountNum();
 }
