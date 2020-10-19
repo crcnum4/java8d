@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Client {
-    protected String name;
-    protected String firstName;
-    protected String lastName;
-    protected String clientId;
-    protected HashMap<Integer, Account> accounts;
-    protected List<DebitCard> cards;
+    private String name;
+    private String firstName;
+    private String lastName;
+    private String clientId;
+    private HashMap<Integer, Account> accounts;
+    private List<DebitCard> cards;
 //    protected List<CheckingAccount> checkingAccounts;
 //    protected List<SavingsAccount> savingsAccounts;
 //    protected List<CDInvestment> cdAccounts;
@@ -37,7 +37,6 @@ public class Client {
     public void addCard(int accountNum) {
         cards.add(new DebitCard("12341234", "1234", accounts.get(accountNum), this));
     }
-
 
 //    public void addAccount(CheckingAccount account) {
 //        checkingAccounts.add(account);

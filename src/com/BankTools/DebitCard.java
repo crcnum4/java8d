@@ -1,8 +1,6 @@
 package com.BankTools;
 
 import com.Accounts.Account;
-import com.Accounts.CheckingAccount;
-import com.Accounts.SavingsAccount;
 import com.Bank.Client;
 
 import java.util.Calendar;
@@ -32,6 +30,13 @@ public class DebitCard {
             return true;
         }
         return false;
+    }
+
+    public int getPrimaryBalance(String pin) {
+        if (this.pin == pin) {
+            return primary.getBalance();
+        }
+        return 0;
     }
 
 }

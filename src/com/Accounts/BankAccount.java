@@ -1,12 +1,14 @@
 package com.Accounts;
 
+import com.Bank.Client;
+
 public class BankAccount implements Account {
     protected int balance;
     private int accountNum;
-    private String owner;
+    private Client owner;
     private String type;
 
-    public BankAccount(int balance, int accountNum, String owner, String type) {
+    public BankAccount(int balance, int accountNum, Client owner, String type) {
         this.balance = balance;
         this.accountNum = accountNum;
         this.owner = owner;
@@ -33,7 +35,7 @@ public class BankAccount implements Account {
     }
 
     public String getOwner() {
-        return owner;
+        return owner.getName();
     }
 
     public int getAccountNum() {
