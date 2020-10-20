@@ -27,7 +27,7 @@ public class BankAccount implements Account {
     }
 
     public String accountDetails() {
-        return type + " Account" + "\tOwner: " + owner + "\tAccount Number: " + accountNum + "\tBalance: " + balance;
+        return type + " Account" + "\tOwner: " + owner.getName() + "\tAccount Number: " + accountNum + "\tBalance: " + balance;
     }
 
     public int getBalance() {
