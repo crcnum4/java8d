@@ -1,9 +1,8 @@
-package Interfaces;
+package com.BankTools;
 
 import java.util.Scanner;
 
-public class Console implements UserInterface {
-
+public class Console implements UI {
     private Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -17,5 +16,4 @@ public class Console implements UserInterface {
         System.out.println(text);
         return scanner.nextInt();
     }
-
 }

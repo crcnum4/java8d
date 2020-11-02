@@ -1,11 +1,9 @@
 package com.Bank;
 
-import Interfaces.UserInterface;
 import com.Accounts.*;
+import com.BankTools.UI;
 
-import java.sql.Savepoint;
 import java.util.HashMap;
-
 public class Bank {
     private HashMap<String, Client> clients;
     private HashMap<Integer, Account> accounts;
@@ -28,7 +26,7 @@ public class Bank {
         System.out.println(clientId);
     }
 
-    public void addAccount(int balance, String clientId, String accountType, UserInterface ui) {
+    public void addAccount(int balance, String clientId, String accountType, UI ui) {
         Client client = clients.get(clientId);
         if (client == null) {
             System.out.println("ERROR: Invalid ClientID");
@@ -36,11 +34,12 @@ public class Bank {
         }
         int accountNumber = (++accountCount);
         Account newAccount = createAccount(balance, client, accountType, accountNumber, ui);
+
         accounts.put(accountNumber, newAccount);
         client.addAccount(newAccount);
     }
 
-    private Account createAccount(int balance, Client client, String accountType, int accountNumber, UserInterface ui ) {
+    private Account createAccount(int balance, Client client, String accountType, int accountNumber, UI ui ) {
 
         switch (accountType) {
             case "Checking":

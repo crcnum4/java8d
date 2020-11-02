@@ -1,8 +1,8 @@
-package Interfaces;
+package com.BankTools;
 
 import java.util.Random;
 
-public class RandomData implements UserInterface{
+public class Chaos implements UI {
     private Random rand = new Random();
 
 
