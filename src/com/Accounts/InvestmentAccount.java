@@ -2,7 +2,7 @@ package com.Accounts;
 
 import com.Bank.Client;
 
-public class InvestmentAccount extends BankAccount implements Account {
+public class InvestmentAccount extends BankAccount {
     private int interestRate = 5;
     private int period = 0;
     private char periodType = 'Q'; //D = day, W = week, M = Month, Q = quarter, Y = Year

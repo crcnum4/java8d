@@ -2,7 +2,7 @@ package com.Accounts;
 
 import com.Bank.Client;
 
-public class CDInvestment extends InvestmentAccount implements Account {
+public class CDInvestment extends InvestmentAccount {
     private int timeFrame;
     private String timePeriod; //D = day, W = week, M = Month, Q = quarter, Y = Year
 

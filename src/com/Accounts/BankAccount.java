@@ -2,7 +2,7 @@ package com.Accounts;
 
 import com.Bank.Client;
 
-public class BankAccount implements Account {
+public abstract class BankAccount {
     protected int balance;
     private int accountNum;
     private Client owner;

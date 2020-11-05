@@ -6,7 +6,7 @@ import com.BankTools.UI;
 import java.util.HashMap;
 public class Bank {
     private HashMap<String, Client> clients;
-    private HashMap<Integer, Account> accounts;
+    private HashMap<Integer, BankAccount> accounts;
     private Integer clientCount = 0;
     private Integer accountCount = 0;
     private String name;
@@ -23,7 +23,7 @@ public class Bank {
     public void addClient(String fname, String lname) {
         String clientId = (++clientCount).toString();
         clients.put(clientId, new Client(fname, lname, clientId));
-        System.out.println(clientId);
+//        System.out.println(clientId);
     }
 
     public void addAccount(int balance, String clientId, String accountType, UI ui) {
@@ -33,13 +33,13 @@ public class Bank {
             return;
         }
         int accountNumber = (++accountCount);
-        Account newAccount = createAccount(balance, client, accountType, accountNumber, ui);
+        BankAccount newAccount = createAccount(balance, client, accountType, accountNumber, ui);
 
         accounts.put(accountNumber, newAccount);
         client.addAccount(newAccount);
     }
 
-    private Account createAccount(int balance, Client client, String accountType, int accountNumber, UI ui ) {
+    private BankAccount createAccount(int balance, Client client, String accountType, int accountNumber, UI ui ) {
 
         switch (accountType) {
             case "Checking":
@@ -64,5 +64,9 @@ public class Bank {
 
     public String getClientAccounts(String clientId) {
         return clients.get(clientId).getAccounts();
+    }
+
+    public BankAccount getAccount(int accountId) {
+        return accounts.get(accountId);
     }
 }

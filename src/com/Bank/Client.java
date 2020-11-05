@@ -12,7 +12,7 @@ public class Client {
     private String firstName;
     private String lastName;
     private String clientId;
-    private HashMap<Integer, Account> accounts;
+    private HashMap<Integer, BankAccount> accounts;
     private List<DebitCard> cards;
 //    protected List<CheckingAccount> checkingAccounts;
 //    protected List<SavingsAccount> savingsAccounts;
@@ -23,14 +23,14 @@ public class Client {
         this.firstName = firstName;
         this.lastName = lastName;
         this.clientId = clientId;
-        accounts = new HashMap<Integer, Account>();
+        accounts = new HashMap<>();
         cards = new ArrayList<DebitCard>();
 //        this.checkingAccounts = new ArrayList<CheckingAccount>();
 //        this.savingsAccounts = new ArrayList<SavingsAccount>();
 //        this.cdAccounts = new ArrayList<CDInvestment>();
     }
 
-    public void addAccount(Account account) {
+    public void addAccount(BankAccount account) {
         accounts.put(account.getAccountNum(), account);
     }
 

@@ -2,7 +2,7 @@ package com.Accounts;
 
 import com.Bank.Client;
 
-public class SavingsAccount extends BankAccount implements Account {
+public class SavingsAccount extends BankAccount {
     static int withdrawLimit = 5;
     private int withdrawCount;
     private int interest;
